@@ -1,7 +1,13 @@
 const express = require('express');
+const routes = require('./routes');
 
 const app = express();
 
-app.get('/', (req, res) => res.json({ message: 'Hello Wolrd' }));
+// GET, POST, PUT, DELETE
+// req.query = Acessar query params(para filtros)
+// req.params = Acessar rout params (para edição, delete)
+// req.body = Acessar corpo da requisição (para criação, edição)
+app.use(express.json());
+app.use(routes);
 
 app.listen(3333);
