@@ -4,7 +4,7 @@ import api from '../../services/api';
 
 import './styles.css';
 
-export default function Dashboard() {
+export default function Dashboard({history}) {
     const [spots, setSpots] = useState([]);
 
     useEffect(() => {
